@@ -10,7 +10,7 @@ function App() {
         <Route path="/" element={<Navigation />}>
           <Route index={true} element={<CaregoriesContainerCom />}></Route>
           <Route path="shop" element={<Shop />}></Route>
-          <Route path="signin" element={<Authentication />}></Route>
+          <Route path="auth" element={<Authentication />}></Route>
         </Route>
       </Routes>
     </>

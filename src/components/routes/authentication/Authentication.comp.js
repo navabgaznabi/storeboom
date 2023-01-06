@@ -1,19 +1,12 @@
 import React from "react";
 import SignUpComp from "../../signUp/SignUp.comp";
-import {
-  signInWithGooglePopup,
-  createUserDocumentUsingAuth,
-} from "../../../utils/firebase/firebase.utils";
+import SignInComp from "../../signIn/SignIn.comp";
+import './Authentication.style.scss'
 
 const Authentication = () => {
-  const logGoogleUser = async () => {
-    const response = await signInWithGooglePopup();
-    const docRef = await createUserDocumentUsingAuth(response.user);
-    console.log(docRef);
-  };
   return (
-    <div>
-      <button onClick={logGoogleUser}>Sign In With Google</button>
+    <div className="authentication-container">
+      <SignInComp />
       <SignUpComp />
     </div>
   );
