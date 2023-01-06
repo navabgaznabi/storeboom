@@ -33,7 +33,6 @@ const CategoriesContainerCom = () => {
   return (
     <div className="categories-container">
       {categories.map((category) => {
-        console.log(category);
         return <CategoryItemComp key={category.id} category={category} />;
       })}
     </div>
