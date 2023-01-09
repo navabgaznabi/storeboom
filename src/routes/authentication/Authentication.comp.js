@@ -1,6 +1,6 @@
 import React from "react";
-import SignUpComp from "../../signUp/SignUp.comp";
-import SignInComp from "../../signIn/SignIn.comp";
+import SignUpComp from "../../components/sign-up/SignUp.comp";
+import SignInComp from "../../components/sign-in/SignIn.comp";
 import './Authentication.style.scss'
 
 const Authentication = () => {
