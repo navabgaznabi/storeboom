@@ -1,10 +1,10 @@
-import {
-  signInWithGooglePopup,
-  createUserDocumentUsingAuth,
-} from "../../utils/firebase/firebase.utils";
 import React from "react";
 import { useState } from "react";
+import {
+  signInWithGooglePopup,
+} from "../../utils/firebase/firebase.utils";
 import { userSignInWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
+
 import ButtonComp from "../button/Button.comp";
 import FormInputComp from "../form-input/FormInput.comp";
 import "./signIn.scss";
@@ -18,10 +18,7 @@ const SignInComp = () => {
   const [formFieldValue, setformFieldValue] = useState(fromField);
 
   const logGoogleUser = async () => {
-    const response = await signInWithGooglePopup();
-    console.log(response);
-    const docRef = await createUserDocumentUsingAuth(response.user);
-    console.log(docRef);
+    await signInWithGooglePopup();
   };
 
   const onChangeHandler = (event) => {
@@ -40,8 +37,7 @@ const SignInComp = () => {
     e.preventDefault();
     try {
       const { email, password } = formFieldValue;
-      const response = await userSignInWithEmailAndPassword(email, password);
-      console.log(response);
+      await userSignInWithEmailAndPassword(email, password);
       resetFormField();
     } catch (error) {
       alert(error.code);
@@ -73,7 +69,7 @@ const SignInComp = () => {
         ></FormInputComp>
         <div className="buttons-container">
           <ButtonComp type="submit">Sign In</ButtonComp>
-          <ButtonComp type='button' buttonType="google" onClick={logGoogleUser}>
+          <ButtonComp type="button" buttonType="google" onClick={logGoogleUser}>
             Google SignIn
           </ButtonComp>
         </div>

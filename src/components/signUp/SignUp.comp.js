@@ -3,6 +3,7 @@ import { useState } from "react";
 import { createUserByEmailAndPasswordWithAuth } from "../../utils/firebase/firebase.utils";
 import ButtonComp from "../button/Button.comp";
 import FormInputComp from "../form-input/FormInput.comp";
+
 import './signUp.scss'
 
 const SignUpComp = () => {
