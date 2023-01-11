@@ -7,7 +7,7 @@ import App from "./App";
 
 import { UserProvider } from "./context/user.context";
 import { ProductsProider } from "./context/Products.context";
-import { CartProvider } from "./context/card.context";
+import { CartProvider } from "./context/cart.context";
 
 import "./index.css";
 
