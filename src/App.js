@@ -1,15 +1,17 @@
-import CaregoriesContainerCom from "./components/categoriesContainer/CategoriesContainer.com";
-import Shop from "./components/routes/shop/shop.comp";
 import { Route, Routes } from "react-router-dom";
-import Navigation from "./components/routes/navigation/Navigation.comp";
-import Authentication from "./components/routes/authentication/Authentication.comp";
+
+import Navigation from "./routes/navigation/Navigation.comp";
+import Home from "./routes/home/Home";
+import ShopComp from "./routes/shop/Shop.comp";
+import Authentication from "./routes/authentication/Authentication.comp";
+
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Navigation />}>
-          <Route index={true} element={<CaregoriesContainerCom />}></Route>
-          <Route path="shop" element={<Shop />}></Route>
+          <Route index element={<Home />}></Route>
+          <Route path="shop" element={<ShopComp />}></Route>
           <Route path="auth" element={<Authentication />}></Route>
         </Route>
       </Routes>

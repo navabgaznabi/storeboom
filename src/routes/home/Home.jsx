@@ -1,8 +1,8 @@
-import React from "react";
-import "./categories-container.scss";
-import CategoryItemComp from "../category/category-item.comp";
+import { Outlet } from "react-router-dom";
 
-const CategoriesContainerCom = () => {
+import CategoriesContainerCom from "../../components/categories-container/CategoriesContainer.com";
+
+const Home = () => {
   const categories = [
     {
       id: 1,
@@ -31,11 +31,11 @@ const CategoriesContainerCom = () => {
     },
   ];
   return (
-    <div className="categories-container">
-      {categories.map((category) => {
-        return <CategoryItemComp key={category.id} category={category} />;
-      })}
+    <div>
+      <CategoriesContainerCom categories={categories}></CategoriesContainerCom>
+      <Outlet />
     </div>
-  );}
+  );
+};
 
-export default CategoriesContainerCom;
+export default Home;

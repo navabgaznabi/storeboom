@@ -4,11 +4,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 //Function for authenticating
 import {
-  getAuth, //To get auth check of user
+  getAuth,
+  signOut, //To get auth check of user
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
 } from "firebase/auth";
 
 // Web app's Firebase configuration
@@ -83,4 +85,15 @@ export const createUserByEmailAndPasswordWithAuth = async (
 export const userSignInWithEmailAndPassword = async (email,password) => {
   if (!email || !password) return;
   return await signInWithEmailAndPassword(auth,email,password);
+}
+export const userSignOut = async () => {
+  try{
+    return await signOut(auth);
+  }catch(e){
+    console.log('Error while Logging out User');
+  }
+}
+
+export const onAuthStateChangedListner = (callback) => { 
+ return onAuthStateChanged(auth, callback);
 }
