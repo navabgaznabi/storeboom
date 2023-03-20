@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 20px 40px;
   font-family: 'Open Sans Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,24 +18,17 @@ a {
 * {
   box-sizing: border-box;
 }
-body {
-  margin: 0;
-  padding: 20px 40px;
-  font-family: 'Open Sans Condensed', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.with-margin{
+  margin: 60px 60px;
 }
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-* {
-  box-sizing: border-box;
+.abs-centre{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
