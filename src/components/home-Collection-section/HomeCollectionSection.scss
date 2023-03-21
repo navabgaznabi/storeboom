@@ -1,0 +1,45 @@
+.collection-section-wrapper {
+    height: 60rem;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.collection-bg {
+    height: 52rem;
+    width: 60vw;
+    position: absolute;
+    background-color: #faedeb;
+}
+.coll-bg-img {
+    position: relative;
+    top: 5vh;
+    height: 54rem;
+    width: 37rem;
+    img {
+        width: 100%;
+        height: 95%;
+        object-fit: cover;
+    }
+}
+
+.collection-content {
+    position: relative;
+    font-family: sans-serif;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+.jshe {
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 25px;
+    padding: 10px 0px 20px 0px;
+    font-weight: 100;
+    opacity: 0.7;
+}
+
+.wdt-btn{
+    width: fit-content;
+}
