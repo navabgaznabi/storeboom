@@ -4,109 +4,102 @@ $gradient-bg: linear-gradient(90deg, $blue, $yellow);
 $transparent-gray: rgba(0, 0, 0, 0.3);
 $transparent-white: rgba(147, 132, 132, 0.15);
 
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.header{
-  height: 80px;
-  width: 100%;
-}
 .navigation {
-  height: 80px;
-  width: 100%;
-  padding: 0px 60px 0px 60px;
-  display: flex;
-  align-items: center;
-  justify-content:space-between;
-  font-weight: 800;
-  background-color: rgb(255, 255, 255);
-  z-index: 10;
-
-  .logo-container {
-    height: 100%;
-    width: 164px;
-    display: flex;
-
-    .logo{
-      align-self: center;
-    }
-  }
-  .nav-links-container {
-    height: 100%;
+    height: 8rem;
+    padding: 0px 5rem 0px 5rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    font-weight: 800;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    left: 0;
+    right: 0;
 
-    .nav-link {
-      padding: 10px 15px;
-      cursor: pointer;
+    .logo-container {
+        height: 100%;
+        width: 15rem;
+        display: flex;
+
+        .logo {
+            align-self: center;
+        }
     }
-  }
+    .nav-links-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .nav-link {
+          padding: 1.5em 1rem;
+          font-size: 1rem;
+            cursor: pointer;
+            @media (min-width: 768px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
 
-.sign-in{
-  color: red;;
+.sign-in {
+    color: red;
 }
 
 .menu {
-  ol {
-    list-style: none;
+    ol {
+        list-style: none;
 
-    &:first-child {
-      width: 100%;
-      max-width: 960px;
-      margin: 1rem auto 5px auto;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      align-items: center;
-    }
-  }
-
-  &-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: background 0.2s ease-in-out;
-    .sub-menu {
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      transform-origin: top;
-      transform: rotateX(-90deg);
-      transition: transform 0.3s linear;
-      background-color:rgb(255, 255, 255);
+        &:first-child {
+            width: 100%;
+            max-width: 960px;
+            margin: 1rem auto 1rem auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            align-items: center;
+        }
     }
 
-    &:hover {
-      border-top: 2px solid gray;
-      background-color: $transparent-white;
-    }
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: background 0.2s ease-in-out;
+        .sub-menu {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+            transition: transform 0.3s linear;
+            background-color: rgb(255, 255, 255);
+        }
 
-    &:hover .sub-menu {
-      z-index: 10;
-      transform: rotateX(0deg);
-    }
+        &:hover {
+            border-top: 2px solid gray;
+            background-color: $transparent-white;
+        }
 
-    .in-nav-link {
-      font-size: 0.8rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: black;
-      text-decoration: none;
-      text-transform: uppercase;
-      // height: 100%;
-      // width: 100%;
-      padding: 1.5em 1em;
+        &:hover .sub-menu {
+            z-index: 10;
+            transform: rotateX(0deg);
+        }
 
-      @media (min-width: 768px) {
-        font-size: 1rem;
-      }
+        .in-nav-link {
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            height: 100%;
+            width: 100%;
+            padding: 1.5em 1rem;
+
+            @media (min-width: 768px) {
+                font-size: 1.5rem;
+            }
+        }
     }
-  }
 }

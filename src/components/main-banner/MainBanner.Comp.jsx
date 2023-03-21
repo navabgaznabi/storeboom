@@ -12,15 +12,13 @@ const MainBannerComp = () => {
     };
     return (
         <div className="background-img-banner abs-centre">
-            <div>
-                <div className="main-banner-text">
-                    Look no further than our clothing store!
-                </div>
-                <div className="main-banner-button abs-centre">
-                    <ButtonComp buttonType="inverted" onClick={shopNowHandler}>
-                        Shop Now
-                    </ButtonComp>
-                </div>
+            <div className="main-banner-text">
+                Look no further than our clothing store!
+            </div>
+            <div className="main-banner-button abs-centre">
+                <ButtonComp buttonType="inverted" onClick={shopNowHandler}>
+                    Shop Now
+                </ButtonComp>
             </div>
         </div>
     );

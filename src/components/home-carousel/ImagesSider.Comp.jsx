@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SliderData } from './SliderData';
 import "./image-slider.scss"
 import { TiChevronLeftOutline,TiChevronRightOutline } from "react-icons/ti";
+import ReviewSliderComp from './ReviewSlider.Comp';
 
 const ImageSlider = () => {
   const [current, setCurrent] = useState(0);
@@ -20,19 +21,12 @@ const ImageSlider = () => {
   }
 
   return (
-    <div className='slider'>
+    <div className='slider abs-centre'>
       <TiChevronRightOutline className='right-arrow' onClick={nextSlide}></TiChevronRightOutline>
       <TiChevronLeftOutline className='left-arrow' onClick={prevSlide} ></TiChevronLeftOutline>
       {SliderData.map((slide, index) => {
         return (
-          <div
-            className={index === current ? 'slide active' : 'slide'}
-            key={index}
-          >
-            {index === current && (
-              <img src={slide.image} alt='travmage' className='image' />
-            )}
-          </div>
+          <ReviewSliderComp index={index} current={current} slide={slide} key={index}/>
         );
       })}
     </div>

@@ -1,11 +1,12 @@
-
 .background-img-banner{
-    display: block;
-    height: 550px;
+    height: 80vh;
     background: url(../../../public/back-ground-image-banner.jpg) no-repeat center /100%;
+    overflow: hidden;
     background-attachment: fixed;
+    background-size: cover;
     z-index: -1;
     opacity: .9;
+    flex-direction: column;
 }
 .banner-button{
     position: absolute;
@@ -13,7 +14,7 @@
 .main-banner-text{
     font-size: 2em;
     font-weight: 900;
-    color: aliceblue;
+    color: white;
 }
 
 .main-banner-button{

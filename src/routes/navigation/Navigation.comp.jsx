@@ -9,6 +9,7 @@ import { userSignOut } from "../../utils/firebase/firebase.utils";
 import CartIcon from "../../components/cart-icon/CartIcon";
 import CartDropdown from "../../components/cart-dropdown/CartDropdown";
 import NavMenuComp from "../../components/nav-menu/Nav-menu.comp";
+import FooterComp from "../../components/footer/Footer.Comp";
 
 const Navigation = () => {
     const { currentUser } = useContext(UserContext);
@@ -16,7 +17,6 @@ const Navigation = () => {
 
     return (
         <Fragment>
-            <section className="header">
                 <div className="sticky navigation">
                     <Link className="logo-container" to="/">
                         <CrownLogo className="logo" />
@@ -39,9 +39,9 @@ const Navigation = () => {
                     </div>
                     {isCartOpen && <CartDropdown />}
                 </div>
-            </section>
 
             <Outlet />
+            <FooterComp/>
         </Fragment>
     );
 };
